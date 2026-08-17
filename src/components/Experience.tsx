@@ -13,7 +13,7 @@ const Experience = () => {
             className="group p-4 rounded-xl border border-border/70 dark:border-dark-border/70 bg-surface dark:bg-dark-surface hover:border-border dark:hover:border-dark-border hover:shadow-[0_1px_8px_rgba(0,0,0,0.04)] dark:hover:shadow-[0_1px_8px_rgba(0,0,0,0.2)] transition-all duration-300"
           >
             {/* Company header */}
-            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+            <div className="flex items-start justify-between gap-2">
               <div>
                 <h3 className="text-[15px] font-sans font-semibold text-primary dark:text-dark-text">
                   {exp.organization}
@@ -35,7 +35,7 @@ const Experience = () => {
                 </div>
               </div>
               {(exp.overallDuration || (exp.roles.length === 1 && exp.roles[0].duration)) && (
-                <span className="text-[12px] text-accent dark:text-dark-link font-sans font-medium tabular-nums flex-shrink-0 bg-accent/5 dark:bg-dark-link/10 px-2 py-0.5 rounded-md">
+                <span className="text-[12px] text-accent dark:text-dark-link font-sans font-medium tabular-nums flex-shrink-0 w-fit bg-accent/5 dark:bg-dark-link/10 px-2 py-0.5 rounded-md mt-0.5">
                   {exp.overallDuration || exp.roles[0].duration}
                 </span>
               )}
@@ -45,12 +45,12 @@ const Experience = () => {
             <div className={`mt-3 ${exp.roles.length > 1 ? "space-y-4" : ""}`}>
               {exp.roles.map((role, j) => (
                 <div key={j} className={exp.roles.length > 1 && j > 0 ? "pt-3 border-t border-border/40 dark:border-dark-border/40" : ""}>
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+                  <div className="flex items-start justify-between gap-2">
                     <h4 className="text-[13.5px] font-sans font-semibold text-primary/85 dark:text-dark-text/85">
                       {role.title}
                     </h4>
                     {exp.roles.length > 1 && (
-                      <span className="text-[12px] text-accent dark:text-dark-link font-sans font-medium tabular-nums flex-shrink-0 bg-accent/5 dark:bg-dark-link/10 px-2 py-0.5 rounded-md">
+                      <span className="text-[12px] text-accent dark:text-dark-link font-sans font-medium tabular-nums flex-shrink-0 w-fit bg-accent/5 dark:bg-dark-link/10 px-2 py-0.5 rounded-md mt-0.5">
                         {role.duration}
                       </span>
                     )}

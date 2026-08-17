@@ -5,7 +5,7 @@ import { SiGooglescholar } from "react-icons/si";
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/pranav-durai/",
+    href: "https://linkedin.com/in/pranavdurai",
     icon: <FiLinkedin size={18} />,
   },
   {
@@ -15,7 +15,7 @@ const socialLinks = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/pranavdurai10",
+    href: "https://github.com/pranavdurai",
     icon: <FiGithub size={18} />,
   },
 ];
@@ -28,7 +28,7 @@ const Hero = () => {
           <img
             src="/PDURAI_GITHUB.png"
             alt="Pranav Durai"
-            className="w-[148px] h-[148px] rounded-full object-cover object-[center_60%] border border-border dark:border-dark-border shadow-sm flex-shrink-0 blur-[0.3px]"
+            className="w-[148px] h-[148px] rounded-full object-cover object-[center_60%] border border-border dark:border-dark-border shadow-sm flex-shrink-0"
           />
         </div>
         <div className="flex-1 pt-1">

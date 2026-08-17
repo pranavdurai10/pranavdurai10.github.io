@@ -51,26 +51,62 @@ const Publications = () => {
                   : "border-border/70 dark:border-dark-border/70 bg-surface dark:bg-dark-surface hover:border-border dark:hover:border-dark-border"
               } hover:shadow-[0_1px_8px_rgba(0,0,0,0.04)] dark:hover:shadow-[0_1px_8px_rgba(0,0,0,0.2)]`}
             >
-              <div className="flex justify-between gap-3 items-stretch">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-[14px] font-sans font-semibold text-primary dark:text-dark-text leading-snug group-hover:text-accent dark:group-hover:text-dark-link transition-colors duration-200">
-                    {pub.link ? (
-                      <a
-                        href={pub.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline"
-                      >
-                        {pub.title}
-                      </a>
-                    ) : (
-                      pub.title
-                    )}
-                  </h3>
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-[14px] font-sans font-semibold text-primary dark:text-dark-text leading-snug group-hover:text-accent dark:group-hover:text-dark-link transition-colors duration-200">
+                      {pub.link ? (
+                        <a
+                          href={pub.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                        >
+                          {pub.title}
+                        </a>
+                      ) : (
+                        pub.title
+                      )}
+                    </h3>
+
+                    {/* Uniform Top-Right Badges & Year Container */}
+                    <div className="flex items-center gap-1.5 flex-shrink-0 pt-0.5">
+                      {pub.type === "dataset" && (
+                        <span className="text-[10px] font-sans font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-400/10 px-2 py-0.5 rounded-full">
+                          Dataset
+                        </span>
+                      )}
+                      {isFeatured && (
+                        <span className="text-[10px] font-sans font-semibold uppercase tracking-wider text-accent dark:text-dark-link bg-accent/10 dark:bg-dark-link/10 px-2 py-0.5 rounded-full">
+                          Featured
+                        </span>
+                      )}
+                      <span className="text-[12px] text-muted dark:text-dark-muted font-sans font-medium tabular-nums ml-0.5">
+                        {pub.year}
+                      </span>
+                      {pub.link && (
+                        <a
+                          href={pub.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted dark:text-dark-muted hover:text-accent dark:hover:text-dark-link transition-colors duration-200 ml-0.5"
+                          aria-label={`Open link for ${pub.title}`}
+                        >
+                          {pub.type === "dataset" ? (
+                            <FiDatabase size={14} />
+                          ) : (
+                            <FiArrowUpRight size={14} />
+                          )}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
                   {renderAuthors(pub.authors)}
                   <p className="mt-1 text-[12.5px] text-muted dark:text-dark-muted font-sans leading-normal">
                     {pub.venue}
                   </p>
+
                   {pub.description && (
                     <p className="mt-2 text-[12.5px] text-primary/65 dark:text-dark-text/65 leading-[1.65] font-sans">
                       {pub.description}
@@ -85,40 +121,6 @@ const Publications = () => {
                       {showCite ? "Hide Citation" : "Cite"}
                     </button>
                   )}
-                </div>
-                
-                <div className="flex flex-col items-end justify-between gap-3 flex-shrink-0 pt-0.5">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[12px] text-muted dark:text-dark-muted font-sans font-medium tabular-nums">
-                      {pub.year}
-                    </span>
-                    {pub.link && (
-                      <a
-                        href={pub.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted dark:text-dark-muted hover:text-accent dark:hover:text-dark-link transition-colors duration-200"
-                      >
-                        {pub.type === "dataset" ? (
-                          <FiDatabase size={14} />
-                        ) : (
-                          <FiArrowUpRight size={14} />
-                        )}
-                      </a>
-                    )}
-                  </div>
-                  <div className="flex flex-col sm:flex-row items-end sm:items-center gap-1.5 justify-end">
-                    {pub.type === "dataset" && (
-                      <span className="text-[10px] font-sans font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-400/10 px-2 py-0.5 rounded-full">
-                        Dataset
-                      </span>
-                    )}
-                    {isFeatured && (
-                      <span className="text-[10px] font-sans font-semibold uppercase tracking-wider text-accent dark:text-dark-link bg-accent/10 dark:bg-dark-link/10 px-2 py-0.5 rounded-full">
-                        Featured
-                      </span>
-                    )}
-                  </div>
                 </div>
               </div>
 

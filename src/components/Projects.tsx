@@ -18,7 +18,7 @@ const Projects = () => {
             } hover:border-border dark:hover:border-dark-border hover:shadow-[0_2px_12px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_2px_12px_rgba(0,0,0,0.25)]`}
           >
             <div>
-              <div className="flex items-start justify-between gap-3 min-h-[3.5rem]">
+              <div className="flex items-start justify-between gap-3 md:min-h-[3.5rem]">
                 <h3 className="text-[15px] font-sans font-semibold text-primary dark:text-dark-text group-hover:text-accent dark:group-hover:text-dark-link transition-colors duration-200">
                   {proj.title}
                 </h3>
