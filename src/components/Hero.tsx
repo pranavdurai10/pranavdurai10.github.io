@@ -5,7 +5,7 @@ import { SiGooglescholar } from "react-icons/si";
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/pranavdurai",
+    href: "https://www.linkedin.com/in/pranav-durai/",
     icon: <FiLinkedin size={18} />,
   },
   {
@@ -15,7 +15,7 @@ const socialLinks = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/pranavdurai",
+    href: "https://github.com/pranavdurai10",
     icon: <FiGithub size={18} />,
   },
 ];
