@@ -1,0 +1,131 @@
+/* Code written by Pranav Durai */
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-heading: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
+  --font-sans: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Light palette — warm neutrals with a cool accent */
+  --color-primary: #18181b;
+  --color-secondary: #27272a;
+  --color-accent: #2563eb;
+  --color-accent-soft: #dbeafe;
+  --color-link: #2563eb;
+  --color-link-hover: #1d4ed8;
+  --color-muted: #71717a;
+  --color-border: #e4e4e7;
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-tag-bg: #f4f4f5;
+  --color-tag-text: #3f3f46;
+  --color-highlight-bar: #2563eb;
+
+  /* Dark palette */
+  --color-dark-bg: #09090b;
+  --color-dark-surface: #18181b;
+  --color-dark-surface-elevated: #1c1c1f;
+  --color-dark-text: #fafafa;
+  --color-dark-muted: #a1a1aa;
+  --color-dark-border: #27272a;
+  --color-dark-link: #60a5fa;
+  --color-dark-link-hover: #93c5fd;
+  --color-dark-accent-soft: #172554;
+  --color-dark-tag-bg: #27272a;
+  --color-dark-tag-text: #d4d4d8;
+  --color-dark-highlight-bar: #3b82f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+.dark body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background-color: #2563eb30;
+  color: inherit;
+}
+
+.dark ::selection {
+  background-color: #60a5fa30;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+
+/* Subtle fade-in for sections */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out both;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}

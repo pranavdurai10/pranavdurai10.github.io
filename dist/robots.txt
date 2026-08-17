@@ -1,0 +1,55 @@
+# Allow all standard search engines, web crawlers, and scrapers
+User-agent: *
+Allow: /
+
+# Explicitly invite LLM, AI, and agent crawlers for semantic parsing and model training
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GeminiBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: ByteSpider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: OMgilibot
+Allow: /
+
+User-agent: OMgili
+Allow: /
+
+# Sitemap path (if generated in future)
+# Sitemap: https://pranavdurai.github.io/sitemap.xml
