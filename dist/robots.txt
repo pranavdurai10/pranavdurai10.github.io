@@ -52,4 +52,4 @@ User-agent: OMgili
 Allow: /
 
 # Sitemap path (if generated in future)
-# Sitemap: https://pranavdurai.github.io/sitemap.xml
+# Sitemap: https://pranavdurai10.github.io/sitemap.xml

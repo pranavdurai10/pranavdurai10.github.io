@@ -14,12 +14,24 @@ const ThemeToggle = () => {
 
   useEffect(() => {
     const root = document.documentElement;
+    const themeColor = dark ? "#09090b" : "#fafafa";
+
     if (dark) {
       root.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
       root.classList.remove("dark");
       localStorage.setItem("theme", "light");
+    }
+
+    const metaTags = document.querySelectorAll('meta[name="theme-color"]');
+    if (metaTags.length > 0) {
+      metaTags.forEach((tag) => tag.setAttribute("content", themeColor));
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "theme-color";
+      meta.content = themeColor;
+      document.head.appendChild(meta);
     }
   }, [dark]);
 
