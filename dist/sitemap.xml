@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://pranavdurai10.github.io/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/PDURAI_GITHUB.png</image:loc>
+      <image:title>Pranav Durai — Applied AI Researcher &amp; Systems Engineer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_FOUNDER_2026.jpg</image:loc>
+      <image:title>FRNTL Pitch Day - South Park Commons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_ROBOTICIST_2_2026.jpg</image:loc>
+      <image:title>Custom 9-DOF Humanoid Arm</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_ACM_LECTURE.png</image:loc>
+      <image:title>ACM Invited Lecture</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_IITG.png</image:loc>
+      <image:title>Pan-IIT AI/ML Panelist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_ROBOTICIST_4_2025.JPG</image:loc>
+      <image:title>Sketching FRNTL's First Humanoid</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_IIT_KHARAGPUR_LECTURE.png</image:loc>
+      <image:title>IIT Kharagpur Keynote</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_ROBOTICIST_1_2025.JPG</image:loc>
+      <image:title>Drywall Robot Power System Integration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_ENGINEER_2024.JPG</image:loc>
+      <image:title>Soldering Test Points on Robot Subsystem</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_CODER_2026.JPG</image:loc>
+      <image:title>Training Deep Learning Models at 3AM</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_COMPUTERVISION_2023.jpg</image:loc>
+      <image:title>Designing Medical Diagnosis Systems</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_IISC.png</image:loc>
+      <image:title>TIFAC Award at IISc</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_FRTDS.png</image:loc>
+      <image:title>Contribution for COVID-19</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_RC_BOAT_2013.jpg</image:loc>
+      <image:title>Double-Propelled R/C Boat</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_SHOEBOX_COMPUTER_2012.jpg</image:loc>
+      <image:title>The Shoebox Computer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pranavdurai10.github.io/gallery_pictures/PRANAVDURAI_HANDSHAKE_2012.jpeg</image:loc>
+      <image:title>R/C Handshake Robot</image:title>
+    </image:image>
+  </url>
+</urlset>
