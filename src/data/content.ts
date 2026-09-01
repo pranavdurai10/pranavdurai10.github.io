@@ -219,9 +219,10 @@ export const publications: Publication[] = [
   {
     title: "MANTLE: A Framework for Adaptive In-Situ Planetary Perception Using a Modular Uplink Principle",
     authors: "Pranav Durai, Gary Doran",
-    venue: "IEEE Transactions on Geoscience and Remote Sensing - USA · Under-Review",
+    venue: "arXiv · Pre-print",
     year: 2026,
     highlight: true,
+    link: "https://arxiv.org/abs/2608.28724",
   },
   {
     title: "HiRISE Landform Classification Dataset",
