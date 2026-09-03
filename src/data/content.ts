@@ -23,6 +23,7 @@ export interface Publication {
   citation?: string;
   type?: "paper" | "dataset";
   description?: string;
+  extraLinks?: { label: string; url: string }[];
 }
 
 export interface Project {
@@ -223,6 +224,19 @@ export const publications: Publication[] = [
     year: 2026,
     highlight: true,
     link: "https://arxiv.org/abs/2608.28724",
+    citation: `@misc{durai2026mantleframeworkadaptiveinsitu,
+      title={MANTLE: A Framework for Adaptive In-Situ Planetary Perception Using a Modular Uplink Principle}, 
+      author={Pranav Durai and Gary Doran},
+      year={2026},
+      eprint={2608.28724},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2608.28724}, 
+}`,
+    extraLinks: [
+      { label: "NASA ADS", url: "https://ui.adsabs.harvard.edu/abs/arXiv:2608.28724" },
+      { label: "Semantic Scholar", url: "https://api.semanticscholar.org/arXiv:2608.28724" },
+    ],
   },
   {
     title: "HiRISE Landform Classification Dataset",

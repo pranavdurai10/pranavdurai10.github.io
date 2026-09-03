@@ -113,20 +113,36 @@ const Publications = () => {
                     </p>
                   )}
                   
-                  {pub.citation && (
-                    <button
-                      onClick={() => setActiveCiteIndex(showCite ? null : i)}
-                      className="mt-2.5 text-[11px] font-sans font-medium text-accent dark:text-dark-link hover:underline inline-flex items-center gap-1 cursor-pointer"
-                    >
-                      {showCite ? "Hide Citation" : "Cite"}
-                    </button>
+                  {(pub.citation || (pub.extraLinks && pub.extraLinks.length > 0)) && (
+                    <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1">
+                      {pub.citation && (
+                        <button
+                          onClick={() => setActiveCiteIndex(showCite ? null : i)}
+                          className="text-[11px] font-sans font-medium text-accent dark:text-dark-link hover:underline inline-flex items-center gap-1 cursor-pointer"
+                        >
+                          {showCite ? "Hide Citation" : "Cite"}
+                        </button>
+                      )}
+                      {pub.extraLinks?.map((extra) => (
+                        <a
+                          key={extra.label}
+                          href={extra.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[11px] font-sans font-medium text-accent dark:text-dark-link hover:underline inline-flex items-center gap-0.5"
+                        >
+                          {extra.label}
+                          <FiArrowUpRight size={11} className="opacity-70" />
+                        </a>
+                      ))}
+                    </div>
                   )}
                 </div>
               </div>
 
               {pub.citation && showCite && (
                 <div className="mt-3 p-3 rounded-lg bg-tag-bg/50 dark:bg-dark-tag-bg/50 border border-border/40 dark:border-dark-border/40 flex justify-between gap-3 items-start animate-fade-up">
-                  <p className="text-[11px] font-mono text-muted dark:text-dark-muted select-all leading-normal flex-1">
+                  <p className="text-[11px] font-mono text-muted dark:text-dark-muted select-all leading-normal flex-1 whitespace-pre-wrap">
                     {pub.citation}
                   </p>
                   <button
