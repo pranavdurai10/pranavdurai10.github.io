@@ -1,6 +1,8 @@
 {
   "name": "Pranav Durai",
   "short_name": "P. Durai",
+  "description": "Applied AI Researcher & Systems Engineer building intelligence for robotics, healthcare, and planetary environments.",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

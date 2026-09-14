@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 const About = () => {
   return (
-    <section id="about" className="py-10">
+    <section id="about" aria-label="About Pranav Durai" className="py-10">
       <SectionHeading title="About" />
       <div className="space-y-4 text-[15px] leading-[1.85] text-primary/85 dark:text-dark-text/85 font-sans">
         <p>

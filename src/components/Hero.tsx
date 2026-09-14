@@ -27,7 +27,10 @@ const Hero = () => {
         <div className="relative">
           <img
             src="/PDURAI_GITHUB.png"
-            alt="Pranav Durai"
+            alt="Pranav Durai — Applied AI Researcher and Systems Engineer"
+            width={148}
+            height={148}
+            fetchPriority="high"
             className="w-[148px] h-[148px] rounded-full object-cover object-[center_60%] border border-border dark:border-dark-border shadow-sm flex-shrink-0"
           />
         </div>
