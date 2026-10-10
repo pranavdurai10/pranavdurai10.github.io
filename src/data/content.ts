@@ -40,6 +40,7 @@ export interface Talk {
   year: number;
   image?: string;
   youtubeLink?: string;
+  link?: string;
 }
 
 export interface Achievement {
@@ -403,6 +404,12 @@ export const projects: Project[] = [
 
 export const talks: Talk[] = [
   {
+    title: "What Should a Robot Learn?",
+    venue: "Athenaeum 2026, IEEE Robotics and Automation Society (RAS), National Institute of Technology – Karnataka (NIT-K Surathkal), India",
+    year: 2026,
+    youtubeLink: "https://youtu.be/eH-v9woxdnQ?si=EmAcw5uYEC3gZPhy",
+  },
+  {
     title: "Building AI-Native Startups with Foundation Models",
     venue: "Hatch - E-Cell, Indian Institute of Technology - Bombay (IIT-B), India",
     year: 2026,
@@ -422,8 +429,9 @@ export const talks: Talk[] = [
   },
   {
     title: "Principles of Large Language Models: Attention, Transformers, and Emergent Capability",
-    venue: "BNM Institute of Technology - Bangalore, India",
+    venue: "Association for Computing Machinery (ACM) Distinguished Guest Lecture, BNM Institute of Technology - Bangalore, India",
     year: 2026,
+    link: "https://www.linkedin.com/posts/activity-7422850033319878656-uB0T?utm_source=share&utm_medium=member_desktop&rcm=ACoAABTuYEcB_79uw7f3J-WT0KNvrRs_qiT105M",
   },
   {
     title: "Vision-Action-Language Models for Humanoid Autonomy with Perception, Language and Whole-body Control",

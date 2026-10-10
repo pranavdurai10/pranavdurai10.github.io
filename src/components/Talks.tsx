@@ -1,7 +1,7 @@
 // Code written by Pranav Durai
 import SectionHeading from "./SectionHeading";
 import { talks } from "../data/content";
-import { FiPlay } from "react-icons/fi";
+import { FiPlay, FiExternalLink } from "react-icons/fi";
 
 const Talks = () => {
   return (
@@ -25,17 +25,30 @@ const Talks = () => {
               <p className="mt-1 text-[12.5px] text-muted dark:text-dark-muted font-sans leading-normal">
                 {talk.venue}
               </p>
-              {talk.youtubeLink && (
-                <div className="mt-2.5 sm:hidden">
-                  <a
-                    href={talk.youtubeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[11.5px] font-sans font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/30 hover:bg-red-100 dark:hover:bg-red-950/50 px-2.5 py-1 rounded-lg transition-colors duration-200"
-                  >
-                    <FiPlay size={12} />
-                    Watch Talk
-                  </a>
+              {(talk.youtubeLink || talk.link) && (
+                <div className="mt-2.5 sm:hidden flex flex-wrap gap-2">
+                  {talk.youtubeLink && (
+                    <a
+                      href={talk.youtubeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[11.5px] font-sans font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/30 hover:bg-red-100 dark:hover:bg-red-950/50 px-2.5 py-1 rounded-lg transition-colors duration-200"
+                    >
+                      <FiPlay size={12} />
+                      Watch Talk
+                    </a>
+                  )}
+                  {talk.link && (
+                    <a
+                      href={talk.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[11.5px] font-sans font-medium text-accent dark:text-dark-link bg-accent/5 dark:bg-dark-link/10 hover:bg-accent/10 dark:hover:bg-dark-link/20 px-2.5 py-1 rounded-lg transition-colors duration-200"
+                    >
+                      <FiExternalLink size={12} />
+                      View Post
+                    </a>
+                  )}
                 </div>
               )}
             </div>
@@ -45,16 +58,31 @@ const Talks = () => {
               <span className="text-[12px] text-muted dark:text-dark-muted font-sans font-medium tabular-nums">
                 {talk.year}
               </span>
-              {talk.youtubeLink && (
-                <a
-                  href={talk.youtubeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[12px] font-sans font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/30 hover:bg-red-100 dark:hover:bg-red-950/50 px-2.5 py-1 rounded-lg transition-colors duration-200"
-                >
-                  <FiPlay size={12} />
-                  Watch Talk
-                </a>
+              {(talk.youtubeLink || talk.link) && (
+                <div className="flex flex-wrap gap-2">
+                  {talk.youtubeLink && (
+                    <a
+                      href={talk.youtubeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[12px] font-sans font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/30 hover:bg-red-100 dark:hover:bg-red-950/50 px-2.5 py-1 rounded-lg transition-colors duration-200"
+                    >
+                      <FiPlay size={12} />
+                      Watch Talk
+                    </a>
+                  )}
+                  {talk.link && (
+                    <a
+                      href={talk.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[12px] font-sans font-medium text-accent dark:text-dark-link bg-accent/5 dark:bg-dark-link/10 hover:bg-accent/10 dark:hover:bg-dark-link/20 px-2.5 py-1 rounded-lg transition-colors duration-200"
+                    >
+                      <FiExternalLink size={12} />
+                      View Post
+                    </a>
+                  )}
+                </div>
               )}
             </div>
           </div>
